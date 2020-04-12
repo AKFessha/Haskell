@@ -25,7 +25,7 @@ notdivisible a b = b == 0 || mod a b /= 0
 list = [x | x<-[0..1000],True]
 
 --Exercise 3(a)
-oddlist = undefined
+oddlist = [x | x<-[1,3..1000],True]
 
 --Exercise 3(b)
 sqlist = undefined
