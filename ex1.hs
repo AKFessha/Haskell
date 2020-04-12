@@ -2,7 +2,7 @@
 -- Exercise 1 (a)
 
 checksum::Int->Int->Int->Bool
-checksum = undefined
+checksum a b c = (a+b)== c
 
 -- Exercise 1 (b)
 higherchecksum::(Int->Int) -> Int->Int->Int->Bool
