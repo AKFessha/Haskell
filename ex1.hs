@@ -28,7 +28,7 @@ list = [x | x<-[0..1000],True]
 oddlist = [x | x<-[1,3..1000],True]
 
 --Exercise 3(b)
-sqlist = undefined
+sqlist = [x | x<-[0..1000], x <= sqrt(50000)]
 
 -- Exercise 4(a)
 
