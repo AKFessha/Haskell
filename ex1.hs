@@ -6,7 +6,7 @@ checksum a b c = (a+b)== c
 
 -- Exercise 1 (b)
 higherchecksum::(Int->Int) -> Int->Int->Int->Bool
-higherchecksum =undefined
+higherchecksum f a b c = f a + f b == f c
 
 examplefunc::Int->Int
 examplefunc x = x * x
