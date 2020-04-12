@@ -33,4 +33,4 @@ sqlist = [x | x<-[0..1000], x <= sqrt(50000)]
 -- Exercise 4(a)
 
 squarefact:: Int -> Int
-squarefact = undefined
+squarefact n = n^2 * squarefact(n-1)
