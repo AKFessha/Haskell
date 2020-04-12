@@ -17,7 +17,7 @@ falsetest1b = higherchecksum examplefunc 2 2 3 == False
 --Exercise 2
 
 notdivisible :: Int -> Int -> Bool
-notdivisible = undefined
+notdivisible a b = b == 0 || mod a b /= 0
 
 
 -- Exercise 3
