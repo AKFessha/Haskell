@@ -11,7 +11,7 @@ myrepeat c = c: myrepeat c
 -- Exercise 2 (a)
 
 myisDigit::Char -> Bool
-myisDigit = undefined
+myisDigit c = ord c > 47 && ord c < 58
 
 -- Exercise 2 (b)
 
