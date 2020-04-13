@@ -4,7 +4,7 @@ import Data.Char
 
 --Ex 1
 myrepeat :: Char -> [Char]
-myrepeat = undefined
+myrepeat c = c: myrepeat c
 
 
 
