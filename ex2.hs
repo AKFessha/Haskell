@@ -14,9 +14,13 @@ myisDigit::Char -> Bool
 myisDigit c = ord c > 47 && ord c < 58
 
 -- Exercise 2 (b)
+offset :: Int
+offset = ord 'A' - ord 'a'
 
 mytoLower::Char -> Char
-mytoLower = undefined
+mytoLower c 
+           | (ord c >= ord 'a' && ord c <= ord 'z') = c
+           | otherwise = chr(ord c - offset)
 
 --Ex 3
 circlesurface :: Float -> Float
