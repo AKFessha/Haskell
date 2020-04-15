@@ -24,7 +24,7 @@ mytoLower c
 
 --Ex 3
 circlesurface :: Float -> Float
-circlesurface = undefined
+circlesurface r = pi * (r*r)
 
 -- Ex 4
 cycleinc::[Integer] -> [Integer]
