@@ -28,7 +28,7 @@ circlesurface r = pi * (r*r)
 
 -- Ex 4
 cycleinc::[Integer] -> [Integer]
-cycleinc = undefined
+cycleinc xs=  xs ++ cycleinc([x + 1| x <- xs])
 
 
 -- Ex 5
