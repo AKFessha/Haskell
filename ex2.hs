@@ -34,4 +34,4 @@ cycleinc xs=  xs ++ cycleinc([x + 1| x <- xs])
 -- Ex 5
 
 compLetters :: Char -> Char -> Char
-compLetters = undefined
+compLetters a b = min a b
