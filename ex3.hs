@@ -1,6 +1,6 @@
 --Ex 1(a)
 checkprod::(Int,Int) -> Int ->Bool
-checkprod (a,b) c = a * b == c
+checkprod (a,b) c = a * b <= c
 
 
 --Ex 1(b) 
