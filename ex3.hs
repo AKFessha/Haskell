@@ -9,7 +9,7 @@ smallerprod = undefined
 
 -- Ex 2(a)
 prime :: Int -> Bool
-prime = undefined
+prime n = mod n 2 /= 0
 
 -- Ex 2(b)
 primes::[Int]
