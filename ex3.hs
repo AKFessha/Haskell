@@ -5,7 +5,7 @@ checkprod (a,b) c = a * b <= c
 
 --Ex 1(b) 
 smallerprod::Int -> [(Int,Int)]
-smallerprod = undefined
+smallerprod i = [(n,m)| n <-[1..i], m <-[1..n], n*m <=i && m<=n]
 
 -- Ex 2(a)
 prime :: Int -> Bool
