@@ -17,7 +17,7 @@ primes = [x | x<-[0..], prime x]
 
 -- Ex 3
 myprefix::String->String->Bool
-myprefix a b = take 2 b == a
+myprefix a b = take (length a) b == a
 
 -- Ex 4
 removeRep :: String -> String
