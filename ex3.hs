@@ -13,7 +13,7 @@ prime n = length [ x | x <- [2..n], n `mod` x == 0] == 1
 
 -- Ex 2(b)
 primes::[Int]
-primes = 
+primes = [x | x<-[0..], prime x]
 
 -- Ex 3
 myprefix::String->String->Bool
