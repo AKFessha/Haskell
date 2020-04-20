@@ -21,7 +21,10 @@ myprefix a b = take (length a) b == a
 
 -- Ex 4
 removeRep :: String -> String
-removeRep = undefined
+removeRep [] = []
+removeRep (x:xs) 
+            | x `elem` xs = removeRep xs
+            | otherwise = x: removeRep xs
 
 
 -- Ex 5
