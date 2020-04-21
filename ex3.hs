@@ -29,7 +29,10 @@ removeRep (x:xs)
 
 -- Ex 5
 vecSqDist :: [Int] -> [Int] -> Int
-vecSqDist = undefined
+vecSqDist [] [] = 0
+vecSqDist (x: xs) (y:ys)
+                    | length xs /= length ys = -1
+                    | otherwise = (x -y)^2 + vecSqDist xs ys
 
 
 
