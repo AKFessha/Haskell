@@ -15,6 +15,10 @@ prime n = length [ x | x <- [2..n], n `mod` x == 0] == 1
 primes::[Int]
 primes = [x | x<-[0..], prime x]
 
+{-primes = myfunc(2 : [3, 5..])
+     where
+        myfunc(p:xs) = p : myfunc[x|x <- xs, x `mod` p > 0] -}
+
 -- Ex 3
 myprefix::String->String->Bool
 myprefix a b = take (length a) b == a
