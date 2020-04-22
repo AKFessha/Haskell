@@ -1,7 +1,10 @@
 --Exercise 1
 
 countocc :: Char -> String -> Int
-countocc =undefined 
+countocc c [] = 0
+countocc c (x:xs )
+              | c == x = 1 + countocc c xs
+              | otherwise = countocc c xs
 
 
 --Exercise 2
