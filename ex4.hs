@@ -6,6 +6,8 @@ countocc c (x:xs )
               | c == x = 1 + countocc c xs
               | otherwise = countocc c xs
 
+--countocc x xs = foldl (\count char -> if char == x then (count + 1) else count) 0 xs
+
 
 --Exercise 2
 
