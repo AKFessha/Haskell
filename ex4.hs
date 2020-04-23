@@ -16,7 +16,10 @@ data Nat = Zero | Nxt Nat
 
 --Exercise 2(a)
 absNat :: Int -> Nat
-absNat = undefined
+absNat n | n == 0 = Zero 
+         | n>0 = Nxt (absNat(n-1))
+         | n<0 = Nxt(absNat(n+1))
+
 
 
 --Exercise 2(b)
