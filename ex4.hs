@@ -39,14 +39,16 @@ myadd (Nxt x) y = Nxt (myadd x y)
 insert :: Ord b => (a -> b) -> a -> [a] -> [a]
 insert f x []= [x]
 insert f x (y:ys)
-              | f x >= f y = x:y:ys
+              | f x > f y = x:y:ys
               | otherwise = y: insert f x ys
 
 
 
 --(b) 
 inssort :: Ord b => (a -> b) -> [a] -> [a]
-inssort = undefined
+inssort f [] = []
+inssort f [x] = [x]
+inssort f (x:xs) = insert f x (inssort f xs)
 
 --(c) Order a list of strings according to the occurences of the given character
 sortwords :: Char -> [String] -> [String]
