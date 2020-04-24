@@ -37,7 +37,10 @@ myadd (Nxt x) y = Nxt (myadd x y)
 --Exercise 3
 --(a)
 insert :: Ord b => (a -> b) -> a -> [a] -> [a]
-insert = undefined
+insert f x []= [x]
+insert f x (y:ys)
+              | f x >= f y = x:y:ys
+              | otherwise = y: insert f x ys
 
 
 
