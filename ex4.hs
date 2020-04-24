@@ -25,8 +25,8 @@ absNat n | n == 0 = Zero
 --Exercise 2(b)
 
 mymult::Nat->Nat->Nat
-mymult = undefined
-
+mymult Zero y = Zero
+mymult (Nxt x) y = myadd y (mymult x y)
 
 myadd:: Nat -> Nat -> Nat
 myadd (Zero) x = x
