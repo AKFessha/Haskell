@@ -52,7 +52,8 @@ inssort f (x:xs) = insert f x (inssort f xs)
 
 --(c) Order a list of strings according to the occurences of the given character
 sortwords :: Char -> [String] -> [String]
-sortwords = undefined
+sortwords c [] = []
+sortwords c xs = inssort (countocc c) xs
 
 
 
