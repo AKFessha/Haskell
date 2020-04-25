@@ -76,6 +76,7 @@ move D (a,b) = (a, b-1)
 type Route = [Step]
 
 positions :: Route -> Position-> [Position]
-positions = undefined
+positions [] (a,b) = [(a,b)]
+positions (x:xs) (a,b) = (a,b) : positions xs (move x (a,b))
 
 --positions [L,R,L,L,U] (0,0) == [(0,0),(-1,0),(0,0),(-1,0),(-2,0),(-2,1)]
