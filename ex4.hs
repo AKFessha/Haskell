@@ -63,7 +63,10 @@ data Step = L | R | U | D
 --Ex 4(a)
 
 move :: Step -> Position -> Position
-move = undefined
+move L (a,b) = (a-1, b)
+move R (a,b) = (a+1, b)
+move U (a,b) = (a, b+1)
+move D (a,b) = (a, b-1)
 
 -- move L (3,4) == (2,4)
 -- move U (0,0) == (0,1)
