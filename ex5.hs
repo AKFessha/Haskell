@@ -14,7 +14,10 @@ cutoffat c (x:xs)
 --Exercise 2
 
 gencollatzdist :: (Int -> Int) -> Int -> Int
-gencollatzdist f x = undefined
+gencollatzdist f x 
+                | x == 1 = 0
+                |f x == 1 = 1
+                | otherwise = 1 + gencollatzdist f (f x)
 
 collatz::Int -> Int
 collatz n 
