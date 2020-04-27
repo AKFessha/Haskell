@@ -32,8 +32,14 @@ collatz n
 genFloatTwo::[Float]
 genFloatTwo = randomRs (0,2) (mkStdGen 42)
 
+sqrtHelper :: Float->[Float]->Float
+sqrtHelper n [x] = x
+sqrtHelper n (x:y:xs)
+             |(x- sqrt n)^2 <= (y- sqrt n)^2 = sqrtHelper n (x:xs)
+             | otherwise = sqrtHelper n (y:xs)
+             
 approxsqrtTwo :: Int -> Float
-approxsqrtTwo = undefined
+approxsqrtTwo n = randomRs (0,n) (mkStdGen 42)
 
 -- Exercise 3(b)
 genFloat::Float -> [Float]
