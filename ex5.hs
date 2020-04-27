@@ -43,7 +43,7 @@ approxsqrtTwo n = sqrtHelper 2 (take n genFloatTwo)
 
 -- Exercise 3(b)
 genFloat::Float -> [Float]
-genFloat = undefined
+genFloat n = randomRs (0,n) (mkStdGen 42)
 
 
 approxsqrt :: Float -> Int -> Float
