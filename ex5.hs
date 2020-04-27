@@ -47,7 +47,7 @@ genFloat n = randomRs (0,n) (mkStdGen 42)
 
 
 approxsqrt :: Float -> Int -> Float
-approxsqrt = undefined
+approxsqrt d n = sqrtHelper d (take n (genFloat d))
 
 --Exercise 4
 
