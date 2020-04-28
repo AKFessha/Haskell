@@ -69,7 +69,8 @@ testtree2 = Node 3 (Leaf 76) (Node 3 (Leaf 8) (Leaf 9))
 
 --(a)
 treesum :: Num a => BTree a -> a 
-treesum = undefined
+treesum (Leaf l) = l
+treesum (Node a l r) = a + treesum l + treesum r
 
 --(b)
 paths :: BTree a -> [[a]] 
