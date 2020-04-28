@@ -52,7 +52,10 @@ approxsqrt d n = sqrtHelper d (take n (genFloat d))
 --Exercise 4
 
 countocc :: Char -> String -> Int
-countocc c = undefined
+countocc x xs = foldr f 0 xs
+ where
+      f char count = if char == x then (count + 1) else count
+
 
 
 
