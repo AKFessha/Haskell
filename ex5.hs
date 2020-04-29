@@ -5,7 +5,8 @@ import System.Random
 --Exercise 1
 
 cutoffat :: Eq a => a -> [a] -> [a]
-cutoffat c [] = []
+cutoffat _ [] = []
+cutoffat _ [x] = [x]
 cutoffat c (x:xs)
                | c == x = x:[]
                | otherwise = x:cutoffat c xs
