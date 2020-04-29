@@ -81,3 +81,11 @@ paths (Node a l r)= map (a:) (paths l ++ paths r)
 reverseTree:: BTree a -> [a]
 reverseTree (Leaf a) = [a]
 reverseTree (Node a l r) = reverseTree r ++ reverseTree l
+
+{-treeLevel::Int-> BTree a -> [[a]]
+treeLevel 0 (null)= []
+treeLevel 0 (Leaf a) = [a]
+treeLevel 0 (Node a l r) = [a]
+treeLevel n (null) = []
+treeLevel n (Leaf a) = [a]
+treeLevel n (Node a l r) = treeLevel n l : treeLevel n r -}
