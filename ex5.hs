@@ -76,3 +76,8 @@ treesum (Node a l r) = a + treesum l + treesum r
 paths :: BTree a -> [[a]] 
 paths (Leaf a) = [[a]]
 paths (Node a l r)= map (a:) (paths l ++ paths r)
+
+
+reverseTree:: BTree a -> [a]
+reverseTree (Leaf a) = [a]
+reverseTree (Node a l r) = reverseTree r ++ reverseTree l
