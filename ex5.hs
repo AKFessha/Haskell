@@ -20,6 +20,11 @@ gencollatzdist f x
                 |f x == 1 = 1
                 | otherwise = 1 + gencollatzdist f (f x)
 
+{-gencollatzdist f x = fst ( foo (0,x) f)
+                where
+                    foo (count,1) f = (count,1)
+                    foo (count,x) f = foo (count +1, f x) f -}
+
 collatz::Int -> Int
 collatz n 
         | mod n 2 == 0 = div n 2
